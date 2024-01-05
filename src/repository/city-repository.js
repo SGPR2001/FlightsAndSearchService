@@ -38,7 +38,7 @@ class CityRepository {
       const city = await City.findByPk(cityId);
       city.name = data.name;
       await city.save();
-      return city;
+      return city; 
     } catch (error) {
       console.log("something went wrong in the repository layer");
       throw { error };
